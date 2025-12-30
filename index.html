@@ -194,12 +194,18 @@
   <span id="seconds">00</span>s
 </div>
 
-<!-- 🎂 Cake (hidden until timer ends) -->
 <div id="cake-section">
   <div id="cake">🎂</div>
   <p>Tap the cake to cut 🎉</p>
+
+  <!-- Step content -->
+  <div id="cake-step" style="display:none; margin-top:15px;">
+    <img id="cake-gif" width="180" alt="">
+    <br>
+    <button id="nextBtn">Next ➜</button>
+  </div>
 </div>
-      </div>
+
 
 
       <div class="right">
@@ -397,7 +403,7 @@ function startTimer() {
 
   document.getElementById("countdown").style.display = "inline-block";
 
-  const targetDate = new Date("December 30, 2025 09:07:15").getTime();
+  const targetDate = new Date("December 31, 2025 12:02:00").getTime();
 
   const timer = setInterval(() => {
     const now = new Date().getTime();
